@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pasya Awan Rizky Saputro — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cur"></div>
+  <div id="cur-r"></div>
+
+  <!-- BG ORBS -->
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="logo">
+      <span class="logo-dot"></span>pasya<em>.dev</em>
+    </a>
+    <ul class="nav-links" id="nl">
+      <li><a href="#about"        onclick="closeNav()">About</a></li>
+      <li><a href="#skills"       onclick="closeNav()">Skills</a></li>
+      <li><a href="#projects"     onclick="closeNav()">Projects</a></li>
+      <li><a href="#education"    onclick="closeNav()">Education</a></li>
+      <li><a href="#certificates" onclick="closeNav()">Certs</a></li>
+      <li><a href="#contact"      onclick="closeNav()">Contact</a></li>
+    </ul>
+    <div class="hbg" id="hbg" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-wrap">
+
+      <!-- LEFT TEXT -->
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-pulse"></span>
+          Available for hire
+        </div>
+
+        <h1 class="hero-heading">
+          Halo, Saya<br/>
+          <span class="hero-name-grad">Pasya Awan</span><br/>
+          <span class="hero-name-grad2">Rizky Saputro</span>
+        </h1>
+
+        <p class="hero-role">Web Developer · UI Designer · AI Enthusiast</p>
+
+        <p class="hero-tagline">
+          Saya selalu menuangkan <strong>ide</strong> ke dalam setiap project yang saya buat —
+          membangun <strong>digital experiences</strong> yang fungsional, estetis, dan bermakna.
+        </p>
+
+        <div class="hero-stats">
+          <div class="hstat glass-card">
+            <div class="hstat-n">50+</div>
+            <div class="hstat-l">Projects</div>
+          </div>
+          <div class="hstat glass-card">
+            <div class="hstat-n">5 Thn</div>
+            <div class="hstat-l">Pengalaman</div>
+          </div>
+          <div class="hstat glass-card">
+            <div class="hstat-n">6+</div>
+            <div class="hstat-l">Sertifikat</div>
+          </div>
+        </div>
+
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-glow">Lihat Projects</a>
+          <a href="cv-pasya.pdf" download class="btn btn-glass">⬇ Download CV</a>
+          <a href="#contact"  class="btn btn-outline">Hubungi Saya</a>
+        </div>
+      </div>
+
+      <!-- RIGHT AVATAR -->
+      <div class="hero-right">
+        <div class="avatar-container">
+          <div class="avatar-ring ring1"></div>
+          <div class="avatar-ring ring2"></div>
+          <div class="avatar-glow"></div>
+          <div class="avatar-photo glass-card">
+            <!-- Ganti src dengan foto kamu -->
+            <img src="img/sya.png" alt="Pasya Awan Rizky Saputro" class="avatar-img" onerror="this.style.display='none';document.getElementById('av-fallback').style.display='flex'"/>
+            <div id="av-fallback" class="avatar-fallback">
+              <span>PA</span>
+              <small>Ganti dengan foto kamu</small>
+            </div>
+          </div>
+          <!-- floating chips -->
+          <div class="float-chip chip-tl glass-card">💻 Full Stack</div>
+          <div class="float-chip chip-tr glass-card">📈 Stock Market</div>
+          <div class="float-chip chip-bl glass-card">🎓 Ilmu Komputer</div>
+          <div class="float-chip chip-br glass-card">⚡ RPL Alumni</div>
+        </div>
+
+        <!-- socials -->
+        <div class="hero-socials">
+          <a href="mailto:pasyaawanr@gmail.com" class="soc-btn" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </a>
+          <a href="https://github.com/pasyaawannn" target="_blank" class="soc-btn" title="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+          </a>
+          <a href="https://id.linkedin.com/in/pasya-awan-rizky-saputro-4347153ab?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" target="_blank" class="soc-btn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.57V9h3.55v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/pasya_arsss" target="_blank" class="soc-btn" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-bar"></div>
+      <!-- <span>scroll down</span> -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       ABOUT
+  ══════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="sec-label r">01 — About</div>
+      <h2 class="sec-title r">Tentang <em>Saya</em></h2>
+
+      <div class="about-grid">
+        <div class="about-photo-col r">
+          <div class="about-photo glass-card">
+            <img src="img/sya2.jpeg" alt="Pasya" class="about-img" onerror="this.style.display='none';document.getElementById('ab-fallback').style.display='flex'"/>
+            <div id="ab-fallback" class="avatar-fallback">
+              <span>PA</span>
+            </div>
+          </div>
+          <div class="about-photo-info glass-card">
+            <div class="api-row"><span class="api-key">Universitas</span><span class="api-val">Universitas Putra Bangsa</span></div>
+            <div class="api-row"><span class="api-key">Jurusan</span><span class="api-val">Ilmu Komputer</span></div>
+            <div class="api-row"><span class="api-key">SMK</span><span class="api-val">Rekayasa Perangkat Lunak</span></div>
+            <div class="api-row"><span class="api-key">Email</span><span class="api-val">pasyaawanr@gmail.com</span></div>
+          </div>
+        </div>
+
+        <div class="about-text r">
+          <p>Halo! Nama saya <strong>Pasya Awan Rizky Saputro</strong>, seorang mahasiswa <strong>Ilmu Komputer</strong> di Universitas Putra Bangsa yang juga merupakan lulusan SMK jurusan <strong>Rekayasa Perangkat Lunak</strong>.</p>
+          <p>Saya percaya bahwa setiap <strong>ide</strong> layak diwujudkan — dan saya selalu menuangkan kreativitas saya ke dalam setiap project yang saya kerjakan. Dari website sederhana hingga aplikasi kompleks, saya nikmati setiap prosesnya.</p>
+          <p>Selain coding, saya juga aktif di dunia <strong>pasar modal</strong> — belajar membaca tren, analisis fundamental, dan momentum trading. Dua dunia yang ternyata punya logika yang sama.</p>
+          <p>Sejak <strong>2021</strong>, saya telah mengerjakan lebih dari <strong>50+ project</strong> dan terus berkembang setiap harinya.</p>
+
+          <div class="about-chips">
+            <span class="chip">Web Developer</span>
+            <span class="chip">UI Designer</span>
+            <span class="chip">Trading</span>
+            <span class="chip">Open Source</span>
+            <span class="chip">Ilmu Komputer</span>
+            <span class="chip">RPL</span>
+          </div>
+
+          <div class="about-actions">
+            <a href="bentar lagi berak" download class="btn btn-glow">⬇ Download CV</a>
+            <a href="https://wa.me/6285603494299" class="btn btn-glass">Hubungi Saya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       SKILLS
+  ══════════════════════════════ -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="sec-label r">02 — Skills</div>
+      <h2 class="sec-title r">Tech <em>Stack</em></h2>
+      <p class="sec-sub r">Tools dan teknologi yang saya kuasai selama 5 tahun berkarya.</p>
+
+      <div class="skills-grid sg">
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🌐</span><strong>Vibe Code</strong></div>
+          <div class="sk-tag">Advanced</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="92"></div></div>
+          <div class="sk-pct">100%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🎨</span><strong>HTML & CSS</strong></div>
+          <div class="sk-tag">Advanced</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="88"></div></div>
+          <div class="sk-pct">88%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>⚡</span><strong>JavaScript</strong></div>
+          <div class="sk-tag">Intermediate</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="78"></div></div>
+          <div class="sk-pct">78%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>⚛️</span><strong>React JS</strong></div>
+          <div class="sk-tag">Intermediate</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="65"></div></div>
+          <div class="sk-pct">65%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>💨</span><strong>Tailwind CSS</strong></div>
+          <div class="sk-tag">Advanced</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="85"></div></div>
+          <div class="sk-pct">85%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🐘</span><strong>PHP</strong></div>
+          <div class="sk-tag">Intermediate</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="68"></div></div>
+          <div class="sk-pct">68%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🗄️</span><strong>MySQL</strong></div>
+          <div class="sk-tag">Intermediate</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="70"></div></div>
+          <div class="sk-pct">70%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🐙</span><strong>Git & GitHub</strong></div>
+          <div class="sk-tag">Intermediate</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="75"></div></div>
+          <div class="sk-pct">75%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🖌️</span><strong>Figma / UI UX</strong></div>
+          <div class="sk-tag">Intermediate</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="72"></div></div>
+          <div class="sk-pct">72%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🐳</span><strong>Bootstrap</strong></div>
+          <div class="sk-tag">Advanced</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="82"></div></div>
+          <div class="sk-pct">82%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>🟢</span><strong>Node.js</strong></div>
+          <div class="sk-tag">Beginner</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="45"></div></div>
+          <div class="sk-pct">45%</div>
+        </div>
+        <div class="skill-card glass-card">
+          <div class="sk-head"><span>📈</span><strong>Trading Saham</strong></div>
+          <div class="sk-tag">Learning</div>
+          <div class="sk-bar"><div class="sk-fill" data-w="60"></div></div>
+          <div class="sk-pct">60%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       PROJECTS
+  ══════════════════════════════ -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <div class="sec-label r">03 — Projects</div>
+      <h2 class="sec-title r">Featured <em>Work</em></h2>
+      <p class="sec-sub r">Sebagian kecil dari 50+ project yang pernah saya kerjakan sejak 2021.</p>
+
+      <div class="projects-grid sg">
+
+        <div class="proj-card glass-card">
+          <div class="proj-top pt1">
+            <div class="proj-num">01</div>
+            <div class="proj-icon">📚</div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Belajar Web 3</h3>
+            <p class="proj-desc">Platform belajar Web3 interaktif berbasis web yang menyediakan materi tentang blockchain, crypto wallet, smart contract, dan pengembangan dApp untuk pemula hingga developer.</p>
+            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Type Script</span></div>
+            <div class="proj-links">
+              <a href="Ke Github Aja" class="plink primary">View ↗</a>
+              <a href="https://github.com/pasyaawannn/BELAJAR-WEB3" class="plink secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card">
+          <div class="proj-top pt2">
+            <div class="proj-num">02</div>
+            <div class="proj-icon">📈</div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Manajemen Kas Keuangan</h3>
+            <p class="proj-desc">Manajemen Kas Keuangan adalah web laporan keuangan sederhana untuk mencatat pemasukan dan pengeluaran, menghitung saldo otomatis, serta menampilkan grafik kas dalam bentuk pie chart dan bar chart.</p>
+            <div class="proj-tags"><span>HTML</span><span>Script.js</span><span>CSS</span></div>
+            <div class="proj-links">
+              <a href="Ke Github Aja" class="plink primary">View ↗</a>
+              <a href="https://github.com/pasyaawannn/LAPORAN-KEUANGAN" class="plink secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card">
+          <div class="proj-top pt3">
+            <div class="proj-num">03</div>
+            <div class="proj-icon">🖥️</div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">IDX Stock Buy/Sell Report Web App</h3>
+            <p class="proj-desc">IDX Stock Buy/Sell Report adalah aplikasi web sederhana berbasis Python Flask yang membantu pengguna melakukan pengecekan harga saham Indonesia secara cepat, serta menampilkan laporan rekomendasi dasar Buy atau Sell.</p>
+            <div class="proj-tags"><span>Python Flask</span></div>
+            <div class="proj-links">
+              <a href="Ke Github Aja" class="plink primary">View ↗</a>
+              <a href="https://github.com/pasyaawannn/CEK-BUY-SELL-SAHAM-ID" class="plink secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card">
+          <div class="proj-top pt4">
+            <div class="proj-num">04</div>
+            <div class="proj-icon">📊</div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Trade Stock Market</h3>
+            <p class="proj-desc">Sebuah platform analisis pasar saham real-time full-stack yang dibuat untuk Bursa Efek Indonesia (IDX). Terinspirasi dari Bloomberg Terminal, TradingView, dan Stockbit</p>
+            <div class="proj-tags"><span>Type Script</span><span>DockerFile</span><span>Bootstrap</span></div>
+            <div class="proj-links">
+              <a href="Ke Github Aja" class="plink primary">View ↗</a>
+              <a href="https://github.com/pasyaawannn/TRADE-STOCK-MARKET" class="plink secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card">
+          <div class="proj-top pt5">
+            <div class="proj-num">05</div>
+            <div class="proj-icon">🪙</div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Pengenalan Bitcoin</h3>
+            <p class="proj-desc">Platform pengenalan Bitcoin untuk pemula, membahas konsep dasar dan cara kerjanya secara simpel.</p>
+            <div class="proj-tags"><span>Type Script</span><span>Java Script</span><span>CSS</span></div>
+            <div class="proj-links">
+              <a href="Ke Github Aja" class="plink primary">View ↗</a>
+              <a href="https://github.com/pasyaawannn/PENGENALAN-BITCOIN" class="plink secondary">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card glass-card proj-more">
+          <div class="proj-more-inner">
+            <div class="proj-more-num">50+</div>
+            <div class="proj-more-text">Total Projects</div>
+            <p>Lihat semua project di GitHub saya</p>
+            <a href="https://github.com/pasyaawannn" target="_blank" class="btn btn-glow">Lihat GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       EDUCATION
+  ══════════════════════════════ -->
+  <section id="education" class="section">
+    <div class="wrap">
+      <div class="sec-label r">04 — Education</div>
+      <h2 class="sec-title r">Pendidikan <em>&amp; Perjalanan</em></h2>
+
+      <div class="edu-timeline r">
+
+                <div class="edu-item">
+          <div class="edu-icon glass-card">🏫</div>
+          <div class="edu-line">
+            <div class="edu-dot"></div>
+            <div class="edu-connector"></div>
+          </div>
+          <div class="edu-body glass-card">
+            <div class="edu-year">Lulus SMK 2024</div>
+            <div class="edu-title">Rekayasa Perangkat Lunak (RPL)</div>
+            <div class="edu-place">SMK</div>
+            <p class="edu-desc">Fondasi kuat di bidang pengembangan perangkat lunak — pemrograman, basis data, desain UI, dan pengembangan web sejak bangku sekolah.</p>
+            <div class="edu-tags"><span class="chip">RPL</span><span class="chip">Web Dev</span><span class="chip">Pemrograman Dasar</span></div>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-icon glass-card">🎓</div>
+          <div class="edu-line">
+            <div class="edu-dot"></div>
+            <div class="edu-connector"></div>
+          </div>
+          <div class="edu-body glass-card">
+            <div class="edu-year">2025 — Sekarang</div>
+            <div class="edu-title">S1 Ilmu Komputer</div>
+            <div class="edu-place">Universitas Putra Bangsa</div>
+            <p class="edu-desc">Mendalami ilmu komputer, algoritma, pemrograman, basis data, jaringan, dan pengembangan perangkat lunak secara komprehensif.</p>
+            <div class="edu-tags"><span class="chip">Ilmu Komputer</span><span class="chip">Algoritma</span><span class="chip">Software Engineering</span><span class="chip">AI Engineering</span></div>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-icon glass-card">💼</div>
+          <div class="edu-line">
+            <div class="edu-dot"></div>
+          </div>
+          <div class="edu-body glass-card">
+            <div class="edu-year">2021 — Sekarang</div>
+            <div class="edu-title">Freelance Web Developer</div>
+            <div class="edu-place">Proyek Mandiri &amp; Kolaborasi</div>
+            <p class="edu-desc">Mengerjakan 50+ project dari berbagai klien dan kebutuhan — landing page, sistem informasi, dashboard, hingga aplikasi web penuh.</p>
+            <div class="edu-tags"><span class="chip">50+ Projects</span><span class="chip">Freelance</span><span class="chip">Full Stack</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CERTIFICATES
+  ══════════════════════════════ -->
+  <section id="certificates" class="section">
+    <div class="wrap">
+      <div class="sec-label r">05 — Certificates</div>
+      <h2 class="sec-title r">My <em>Achievements</em></h2>
+
+      <div class="certs-grid sg">
+        <div class="cert-card glass-card">
+          <div class="cert-left">
+            <div class="cert-icon">🎓</div>
+          </div>
+          <div class="cert-info">
+            <div class="cert-name">Belajar Dasar Pemrograman Web</div>
+            <div class="cert-platform">Dicoding Indonesia</div>
+            <div class="cert-year">2023</div>
+          </div>
+          <div class="cert-check">✓</div>
+        </div>
+        <div class="cert-card glass-card">
+          <div class="cert-left"><div class="cert-icon">🏆</div></div>
+          <div class="cert-info">
+            <div class="cert-name">Responsive Web Design</div>
+            <div class="cert-platform">freeCodeCamp</div>
+            <div class="cert-year">2023</div>
+          </div>
+          <div class="cert-check">✓</div>
+        </div>
+        <div class="cert-card glass-card">
+          <div class="cert-left"><div class="cert-icon">📈</div></div>
+          <div class="cert-info">
+            <div class="cert-name">Pengantar Pasar Modal</div>
+            <div class="cert-platform">IDX Investor Area</div>
+            <div class="cert-year">2024</div>
+          </div>
+          <div class="cert-check">✓</div>
+        </div>
+        <div class="cert-card glass-card">
+          <div class="cert-left"><div class="cert-icon">💻</div></div>
+          <div class="cert-info">
+            <div class="cert-name">JavaScript Algorithms &amp; Data Structures</div>
+            <div class="cert-platform">freeCodeCamp</div>
+            <div class="cert-year">2024</div>
+          </div>
+          <div class="cert-check">✓</div>
+        </div>
+        <div class="cert-card glass-card">
+          <div class="cert-left"><div class="cert-icon">🎨</div></div>
+          <div class="cert-info">
+            <div class="cert-name">UI/UX Design Fundamentals</div>
+            <div class="cert-platform">Coursera · Google</div>
+            <div class="cert-year">2024</div>
+          </div>
+          <div class="cert-check">✓</div>
+        </div>
+        <div class="cert-card glass-card">
+          <div class="cert-left"><div class="cert-icon">⚙️</div></div>
+          <div class="cert-info">
+            <div class="cert-name">Belajar Membuat Front-End Web</div>
+            <div class="cert-platform">Dicoding Indonesia</div>
+            <div class="cert-year">2024</div>
+          </div>
+          <div class="cert-check">✓</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       CONTACT
+  ══════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="sec-label r">06 — Contact</div>
+      <h2 class="sec-title r">Let's <em>Connect</em></h2>
+      <p class="sec-sub r">Punya project, ide kolaborasi, atau sekadar mau ngobrol soal tech &amp; saham? Langsung hubungi!</p>
+
+      <div class="contact-grid">
+
+        <!-- INFO -->
+        <div class="contact-info r">
+          <div class="contact-cards">
+            <a href="mailto:pasyaawanr@gmail.com" class="cinfo-card glass-card">
+              <div class="cinfo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              </div>
+              <div>
+                <div class="cinfo-label">Email</div>
+                <div class="cinfo-val">pasyaawanr@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://github.com/pasyaawannn" target="_blank" class="cinfo-card glass-card">
+              <div class="cinfo-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+              </div>
+              <div>
+                <div class="cinfo-label">GitHub</div>
+                <div class="cinfo-val">github.com/pasya</div>
+              </div>
+            </a>
+            <a href="https://id.linkedin.com/in/pasya-awan-rizky-saputro-4347153ab?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile" target="_blank" class="cinfo-card glass-card">
+              <div class="cinfo-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.57V9h3.55v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              </div>
+              <div>
+                <div class="cinfo-label">LinkedIn</div>
+                <div class="cinfo-val">linkedin.com/in/pasya-awan-rizky-saputro</div>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/pasya_arsss" target="_blank" class="cinfo-card glass-card">
+              <div class="cinfo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </div>
+              <div>
+                <div class="cinfo-label">Instagram</div>
+                <div class="cinfo-val">@pasya_arsss</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- FORM — kirim ke email via Formspree -->
+        <div class="contact-form-wrap r">
+          <form class="contact-form glass-card" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-note">
+              💡 Form ini akan langsung terkirim ke <strong>pasyaawanr@gmail.com</strong>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Nama</label>
+              <input type="text" name="name" class="cf-input" placeholder="Nama kamu" required/>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Email</label>
+              <input type="email" name="email" class="cf-input" placeholder="email@kamu.com" required/>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">Pesan</label>
+              <textarea name="message" class="cf-textarea" placeholder="Cerita project atau ide kamu..." required></textarea>
+            </div>
+            <!-- hidden field agar balasan ke email Pasya -->
+            <input type="hidden" name="_replyto" value="pasyaawanr@gmail.com"/>
+            <input type="hidden" name="_subject" value="Pesan baru dari Portfolio Pasya"/>
+            <button type="submit" class="btn btn-glow btn-full" id="submitBtn">
+              Kirim Pesan →
+            </button>
+            <div id="formStatus" class="form-status"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">pasya<em>.dev</em></div>
+          <p>Selalu menuangkan ide ke dalam project yang bermakna.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <div>📧 pasyaawanr@gmail.com</div>
+          <div>🎓 Universitas Putra Bangsa</div>
+          <div>💻 Ilmu Komputer</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Pasya Awan Rizky Saputro. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
